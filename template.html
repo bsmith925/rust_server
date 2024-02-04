@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            justify-items: center;
+            align-items: start;
+            justify-content: start;
+            min-width: 600px; /* Adjust as needed */
+        }
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 150px; /* Set a fixed width for each gallery item */
+        }
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        .gallery-item span {
+            margin-top: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%; /* Ensure the text spans the full width of the parent */
+            text-align: center;
+        }
+    </style>    
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <div class="gallery">
+        {{image_links}}
+    </div>
+</body>
+</html>
